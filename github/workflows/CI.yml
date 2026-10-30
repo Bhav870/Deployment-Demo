@@ -11,18 +11,18 @@ jobs:
 
     steps:
       - name: Download project code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup--python@v5
+        uses: actions/setup-python@v5
         with: 
           python-version: "3.11"
 
       - name: Install Libraries
         run: pip install -r requirements.txt
 
-      -name: Train ML model
+      - name: Train ML model
         run: python train.pyhton
 
-      -name: Test ML model
+      - name: Test ML model
         run: python test.py
